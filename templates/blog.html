@@ -13,10 +13,11 @@
                 <div class="post-thumbnail"><a href="{{post.get_absolute_url}}"><img src="{{post.thumbnail.url}}" alt="..." class="img-fluid"></a></div>
                 <div class="post-details">
                   <div class="post-meta d-flex justify-content-between">
-                    <div class="date meta-last">20 May | 2016</div>
-                    {% for car in post.categories.all %}
-                    <div class="category"><a href="#">{{cat}}</a></div>
+                    <div class="category">
+                    {% for cat in post.categories.all %}
+                    <a href="#">{{cat}}</a>
                     {% endfor %}
+                    </div>
                   </div><a href="#">
                     <h3 class="h4">{{post.title}}</h3></a>
                   <p class="text-muted">{{post.overview}}</p>
